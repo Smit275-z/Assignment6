@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showAlert = false
+    @State private var showAlert = false    // Tracks alert visibility
     var body: some View {
        
         VStack(spacing: 16) {
-            Image("myPhoto")
+            Image("myPhoto")       // Profile image with circular style
                 .resizable()
                 .scaledToFit()
                 .frame(width: 150, height: 150)
@@ -15,10 +15,10 @@ struct ContentView: View {
                 )
                 .shadow(radius: 7)
             
-            Text("Smit Patel")
+            Text("Smit Patel")       // Name and program information
                 .font(.title)
                 .bold()
-            Text("Diploma Computer Programming")
+            Text("Diploma Computer Programming")     // Graduation info with SF Symbol
                 .font(.subheadline)
                 .foregroundColor(.secondary)
             
@@ -29,9 +29,9 @@ struct ContentView: View {
            }
            .font(.subheadline)
             
-            Divider()
+            Divider()     // Visual separator
                  VStack(alignment: .leading, spacing: 4) {
-                     Text("Career Goal:")
+                     Text("Career Goal:")     // Career goal section
                          .font(.headline)
                      Text("Aspiring iOS Developer with a passion for creating user-friendly mobile applications.")
                          .font(.subheadline)
@@ -41,7 +41,7 @@ struct ContentView: View {
                  VStack(alignment: .leading, spacing: 4) {
                      Text("Portfolio Highlights:")
                          .font(.headline)
-                     Text("• GPA: 3.9/4.0")
+                     Text("• GPA: 3.9/4.0")     // Portfolio highlights section
                      Text("• Experienced ios developer")
                      Text("• Deep knowledge of Angular")
                      Text("• Java and Kotlin Proficient")
@@ -49,7 +49,7 @@ struct ContentView: View {
                  .frame(maxWidth: .infinity, alignment: .leading)
             
             Divider()
-               RoundedRectangle(cornerRadius: 10)
+               RoundedRectangle(cornerRadius: 10)     // Example Shape with text overlay
                    .fill(Color.blue.opacity(0.2))
                    .frame(height: 50)
                    .overlay(
@@ -59,7 +59,7 @@ struct ContentView: View {
                    )
             
             Spacer()
-                Button(action: {
+                Button(action: {      // Button that shows an alert when tapped
                     showAlert = true
                 }) {
                     Label("Favourite Course", systemImage: "book.fill")
