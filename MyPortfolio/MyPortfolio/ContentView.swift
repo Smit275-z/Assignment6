@@ -2,11 +2,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 16) {
+            Image("myPhoto")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 150, height: 150)
+                            .clipShape(Circle())
+                            .overlay(
+                                Circle().stroke(Color.blue, lineWidth: 4)
+                            )
+                            .shadow(radius: 7)
         }
         .padding()
     }
