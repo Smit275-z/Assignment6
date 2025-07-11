@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showAlert = false
     var body: some View {
+       
         VStack(spacing: 16) {
             Image("myPhoto")
                 .resizable()
@@ -55,6 +57,22 @@ struct ContentView: View {
                            .font(.subheadline)
                            .foregroundColor(.blue)
                    )
+            
+            Spacer()
+                Button(action: {
+                    showAlert = true
+                }) {
+                    Label("Favourite Course", systemImage: "book.fill")
+                }
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+                .alert("Favourite Course", isPresented: $showAlert) {
+                    Button("OK", role: .cancel) { }
+                } message: {
+                    Text("My favourite course so far is Mobile Application Development!")
+                }
         }
         .padding()
     }
