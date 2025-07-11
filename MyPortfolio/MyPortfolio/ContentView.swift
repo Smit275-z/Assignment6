@@ -26,6 +26,25 @@ struct ContentView: View {
                    Text("2025 graduation year")
            }
            .font(.subheadline)
+            
+            Divider()
+                 VStack(alignment: .leading, spacing: 4) {
+                     Text("Career Goal:")
+                         .font(.headline)
+                     Text("Aspiring iOS Developer with a passion for creating user-friendly mobile applications.")
+                         .font(.subheadline)
+                 }
+                 .frame(maxWidth: .infinity, alignment: .leading)
+                 
+                 VStack(alignment: .leading, spacing: 4) {
+                     Text("Portfolio Highlights:")
+                         .font(.headline)
+                     Text("• GPA: 3.9/4.0")
+                     Text("• Experienced ios developer")
+                     Text("• Deep knowledge of Angular")
+                     Text("• Java and Kotlin Proficient")
+                 }
+                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding()
     }
