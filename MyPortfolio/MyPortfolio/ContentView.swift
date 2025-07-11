@@ -45,6 +45,16 @@ struct ContentView: View {
                      Text("• Java and Kotlin Proficient")
                  }
                  .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Divider()
+               RoundedRectangle(cornerRadius: 10)
+                   .fill(Color.blue.opacity(0.2))
+                   .frame(height: 50)
+                   .overlay(
+                       Text("Code. Create. Innovate.")
+                           .font(.subheadline)
+                           .foregroundColor(.blue)
+                   )
         }
         .padding()
     }
